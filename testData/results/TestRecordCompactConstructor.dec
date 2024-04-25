@@ -1,0 +1,24 @@
+package records;
+
+import java.util.Objects;
+
+public record TestRecordCompactConstructor<T>(T first, T... other) {
+   @SafeVarargs
+   public TestRecordCompactConstructor {
+      Objects.requireNonNull(first);// 6
+   }
+}// 5
+// 7
+class 'records/TestRecordCompactConstructor' {
+   method '<init> (Ljava/lang/Object;[Ljava/lang/Object;)V' {
+      5      7
+      b      8
+      10      9
+      13      10
+   }
+}
+
+Lines mapping:
+5 <-> 10
+6 <-> 8
+7 <-> 11
